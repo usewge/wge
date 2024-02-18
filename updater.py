@@ -1,8 +1,6 @@
 import shutil, requests, zipfile, os
 
 url = 'https://codeload.github.com/usewge/wge/zip/refs/heads/main'
-zip = 'temp.zip'
-tempfolder = 'temp'
 def download_file(url, destination):
     response = requests.get(url)
     if response.status_code == 200:
@@ -30,20 +28,20 @@ def delete_file_or_folder(path):
             os.remove(path)
             print(f"File {path} deleted with success.")
         elif os.path.isdir(path):
-            os.rmdir(path)
+            shutil.rmtree(path)
             print(f"Folder {path} deleted with success.")
         else:
             print(f"The path {path} isnt valid.")
     except Exception as e:
         print(f"Error on delete {path}: {e}")
-        
+
 delete_file_or_folder("./requirements.txt")
 delete_file_or_folder("./uninstall.bat")
 delete_file_or_folder("./WGE.bat")
 delete_file_or_folder("./WGE-debug.bat") 
 delete_file_or_folder("./dist")
-download_file(url, zip)
-extract_zip(zip, tempfolder) 
+download_file(url, "./temp.zip")
+extract_zip("./temp.zip", "./temp")
 move_file_or_folder("./temp/wge-main/dist", "./")
 move_file_or_folder("./temp/wge-main/requirements.txt", "./requirements.txt")
 move_file_or_folder("./temp/wge-main/uninstall.bat", "./uninstall.bat")
