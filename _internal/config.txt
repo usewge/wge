@@ -1,4 +1,4 @@
-sensitivity = 150
+sensitivity = 200
 dpad_up = MOUSE_MIDDLE
 dpad_left = B
 dpad_down = TAB
@@ -12,9 +12,8 @@ rt = MOUSE_LEFT
 rb = E
 rs = V
 x = F
-y = R
+y = 2
 b = C
 a = SPACE
 enable_pause = INSERT
-force_close = F3
 parachute_key = ALT_L
