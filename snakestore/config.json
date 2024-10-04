@@ -1,0 +1,111 @@
+{
+  "Title": "",
+  "ImageUrl": "",
+  "ControllerType": "360",
+  "AnimatedBackground": false,
+  "CustomCurve": [
+    {
+      "X": 0,
+      "Y": 200
+    },
+    {
+      "X": 100,
+      "Y": 134
+    },
+    {
+      "X": 200,
+      "Y": 74
+    },
+    {
+      "X": 300,
+      "Y": 0
+    }
+  ],
+  "HorizontalSensitivity": 300,
+  "VerticalSensitivity": 300,
+  "AntiRecoil": 0,
+  "Deadzone": 220,
+  "DeadzoneMin": 0,
+  "SensiMultiplier": 8000,
+  "BuffedAimChecked": true,
+  "BuffedAimHipfireChecked": false,
+  "AutoPingChecked": false,
+  "MouseFilterChecked": true,
+  "RapidFireChecked": false,
+  "RapidFireInterval": 10,
+  "AutoPingInterval": 1000,
+  "AutoStrafeInterval": 10,
+  "AutoStrafePower": 172,
+  "EnableTray": false,
+  "InputBlocker": true,
+  "KeyTriggerMappings": {
+    "RightTrigger": [],
+    "LeftTrigger": []
+  },
+  "KeyMappings": {
+    "A": [],
+    "X": [],
+    "Y": [],
+    "B": [],
+    "RightShoulder": [],
+    "RightThumb": [],
+    "LeftShoulder": [],
+    "LeftThumb": [],
+    "Start": [],
+    "Back": []
+  },
+  "KeyDirectionMappings": {
+    "Up": [],
+    "Down": [],
+    "Left": [],
+    "Right": []
+  },
+  "KeyFunctionsMappings": {
+    "EnableDisable": [
+      "ExtraButton2"
+    ],
+    "HighSense": [],
+    "AutoPressAndRelease": [],
+    "StrafeKeys": [],
+    "AutoPing": [],
+    "RapidFire": []
+  },
+  "KeyL3Mappings": {
+    "LUp": [],
+    "LLeft": [],
+    "LRight": [],
+    "LDown": []
+  },
+  "KeyR3Mappings": {
+    "RUp": [],
+    "RLeft": [],
+    "RRight": [],
+    "RDown": []
+  },
+  "Macros": [
+    {
+      "Name": "ROTATIONAL_AIM",
+      "Key": "RightButton",
+      "Script": "LOOP(ROTATIONAL) IF(L3_CLEAR,TRUE) SET(JLX,11436) WAIT(10) IF(L3_CLEAR,TRUE) SET(JLX,-11437) WAIT(10) / !LOOP(ROTATIONAL) SET(JLX,0)",
+      "IsEnabled": false
+    },
+    {
+      "Name": "RESET_ALL",
+      "Key": "Insert",
+      "Script": "RESET_CONTROLLER(TRUE) RESET_KEYBOARD(TRUE)",
+      "IsEnabled": true
+    },
+    {
+      "Name": "SILENT_AIM_COD",
+      "Key": "Insert",
+      "Script": "LOOP(SILENT) IF(R3_Y_CLEAR,TRUE) IF(SAFE_SILENT,TRUE) SET(JRY,-1800) WAIT(10) IF(R3_Y_CLEAR,TRUE) SET(JRY,1800) WAIT(10)",
+      "IsEnabled": true
+    },
+    {
+      "Name": "ANTI_RECOIL",
+      "Key": "LeftButton",
+      "Script": "ANTI_RECOIL(0)",
+      "IsEnabled": true
+    }
+  ]
+}
