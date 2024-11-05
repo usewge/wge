@@ -1,0 +1,11 @@
+{
+  "ColorTolerance": 35,
+  "Smoothness": 5,
+  "Fov": 250,
+  "XPosition": 3,
+  "YPosition": -10,
+  "AutoPingInterval": 1000,
+  "TargetColor": "D720CD",
+  "AutoRemovePing": true,
+  "TargetKey": "RightButton"
+}
